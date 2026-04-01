@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollspy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-fishing" data-offset="50">
+
+    <nav id="navbar-fishing" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Fishing Guide</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Equipment</a></li>
+                    <li><a href="#section2">Techniques</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Species <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section3">Bass</a></li>
+                            <li><a href="#section4">Trout</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#section5">Catfish</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid">
+        <br><br>
+        <h1>Fishing Equipment</h1>
+        <p>Essential fishing gear includes rods, reels, lines, hooks, and tackle boxes. A good beginner setup consists
+            of a medium-action spinning rod paired with a quality spinning reel. Don't forget to bring a variety of
+            lures and baits to match different fishing conditions.
+    </div>
+
+    <div id="section2" class="container-fluid">
+        <h1>Fishing Techniques</h1>
+        <p>Casting is the fundamental skill every angler must master. Practice your casting accuracy in open areas
+            before hitting the water. The overhead cast is most common, but side-arm and roll casts have their place
+            too.</p>
+
+    </div>
+
+    <div id="section3" class="container-fluid">
+        <h1>Bass Fishing</h1>
+        <p>Largemouth and smallmouth bass are among the most popular freshwater game fish in North America. They're
+            aggressive predators that respond well to a variety of lures including crankbaits, spinnerbaits, and soft
+            plastics.</p>
+        <p>Bass prefer structure - look for them around submerged logs, rock piles, weed beds, and drop-offs. Early
+            morning and late evening are prime feeding times, though bass can be caught throughout the day with the
+            right approach.</p>
+        <p>Topwater lures create exciting strikes, especially during low-light conditions. The explosive surface strikes
+            from bass are what many anglers live for. Try buzzbaits, poppers, and walking baits during dawn and dusk.
+        </p>
+        <p>Texas-rigged soft plastic worms are incredibly effective for bass. This versatile presentation allows you to
+            fish through heavy cover without getting snagged. Use a bullet weight and work the bait slowly along the
+            bottom.</p>
+    </div>
+
+    <div id="section4" class="container-fluid">
+        <h1>Trout Fishing</h1>
+        <p>Trout fishing requires finesse and patience. These fish are found in cold, clear streams and lakes. Rainbow,
+            brown, and brook trout each have unique behaviors and preferred habitats that anglers should understand.</p>
+        <p>Fly fishing is a classic method for trout, using artificial flies that imitate insects. However, spinning
+            gear with small lures or live bait like worms and salmon eggs also works well for beginners and experienced
+            anglers alike.</p>
+        <p>Stream fishing for trout involves reading the water - look for pools, runs, and eddies where trout hold while
+            waiting for food to drift by. Stealth is important as trout spook easily in clear water.</p>
+        <p>Water temperature is critical for trout. They thrive in water between 50-65 degrees Fahrenheit. In summer,
+            fish deeper pools or higher elevation streams where water stays cooler. In spring and fall, trout are more
+            active throughout the day.</p>
+    </div>
+
+    <div id="section5" class="container-fluid">
+        <h1>Catfish Fishing</h1>
+        <p>Catfish are bottom-feeders with an excellent sense of smell. They're less picky than other species and will
+            eat a wide variety of baits including chicken liver, cut bait, stink baits, and nightcrawlers.</p>
+        <p>Channel catfish, blue catfish, and flathead catfish are the main species targeted by anglers. They grow large
+            and put up a strong fight, making them exciting to catch on medium to heavy tackle.</p>
+        <p>Fish for catfish near structure on the bottom - under bridges, in deep holes, and along creek channels. Night
+            fishing can be particularly productive as catfish are more active after dark and venture into shallower
+            water to feed.</p>
+        <p>Use circle hooks for catfish to improve hookup rates and reduce gut-hooking. These hooks are designed to
+            catch in the corner of the fish's mouth when you simply reel in tension, rather than setting the hook with a
+            sharp jerk.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUnction </title>
+    <style>
+        .btn {
+            background-color: red;
+            border-radius: 18px;
+            border-color: solid rgb(0, 0, 0);
+            color: white;
+            font-size: medium;
+            padding: 7px;
+            font-weight: 500px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" onclick="myfct(5000, 495)">Analytic revenue</button>
+    <p>Click to show analytic revenue</p>
+
+    <script>
+        function myfct(x, y, z) {
+            if (z == undefined) {
+                z = 1
+            }
+            document.write(x * y * z)
+        }
+    </script>
+</body>
+
+</html>

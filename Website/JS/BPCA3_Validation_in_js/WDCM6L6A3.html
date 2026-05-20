@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Screen 1: Phone Entry -->
+<div class="screen" id="screen-phone">
+
+  <div class="brand-icon">🔐</div>
+  <p class="brand-name">Verify</p>
+
+  <h1>Verify your phone</h1>
+  <p class="subtitle">
+    We'll send a 6-digit OTP to your<br>registered mobile number
+  </p>
+
+  <div class="phone-input-wrap" id="phone-wrap">
+    <span class="phone-flag">🇮🇳</span>
+    <span class="phone-prefix">+91</span>
+    <input
+      type="tel"
+      id="phone-input"
+      class="phone-input"
+      maxlength="10"
+      placeholder="Enter mobile number"
+      inputmode="numeric"
+    />
+  </div>
+  <p class="phone-msg" id="phone-msg"></p>
+
+  <button class="btn-primary" onclick="sendOTP()">Send OTP →</button>
+  <p class="subtitle" style="margin-top:4px;font-size:11px;">
+    Standard SMS rates may apply
+  </p>
+
+</div>
+
+
+<!-- Screen 2: OTP Entry -->
+<div class="screen" id="screen-otp" style="display:none">
+
+  <div class="sms-toast">
+    <span class="sms-icon">📱</span>
+    <div>
+      <p class="sms-sender">Messages · Just now</p>
+      <p class="sms-text">
+        Your Verify OTP is
+        <span class="sms-otp" id="otp-display">------</span>.
+        Valid for 30 seconds. Do not share with anyone.
+      </p>
+    </div>
+  </div>
+
+  <h1>Enter OTP</h1>
+  <p class="subtitle">Sent to +91 <span id="sent-to">----------</span></p>
+
+  <input
+    type="text"
+    id="otp-input"
+    class="otp-input"
+    maxlength="6"
+    placeholder="------"
+    inputmode="numeric"
+  />
+
+  <p class="msg" id="msg"></p>
+  <p class="attempts-left" id="attempts-left"></p>
+
+  <div class="timer-row">
+    <span id="timer-text">
+      Resend in <span class="timer-count" id="timer">30</span>s
+    </span>
+    <button
+      class="btn-resend"
+      id="resend-btn"
+      onclick="sendOTP()"
+      disabled
+      style="display:none"
+    >Resend OTP</button>
+  </div>
+
+  <button class="btn-primary" onclick="verifyOTP()">Verify OTP ✓</button>
+
+</div>
+
+
+<!-- Screen 3: Success -->
+<div class="screen" id="screen-success" style="display:none">
+
+  <div class="success-icon">✅</div>
+  <div class="success-badge">PHONE VERIFIED</div>
+  <h1 class="success-title">You're verified!</h1>
+  <p class="success-subtitle">
+    Your phone number has been verified successfully.<br>
+    Welcome to <strong>Verify</strong>!
+  </p>
+  <button class="btn-secondary" onclick="tryAgain()">← Verify another number</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

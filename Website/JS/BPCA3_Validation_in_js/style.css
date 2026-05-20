@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.screen {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.10);
+  text-align: center;
+}
+
+.brand-icon {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #ff6b35, #e63000);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 30px;
+  box-shadow: 0 6px 20px rgba(255,107,53,0.35);
+}
+
+.brand-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff6b35;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.phone-input-wrap {
+  background: #f7f7f9;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 13px 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color 0.2s;
+}
+
+.phone-input-wrap:focus-within { border-color: #ff6b35; background: #fff; }
+.phone-input-wrap.is-error     { border-color: #e63000; background: #fff8f7; }
+
+.phone-flag   { font-size: 22px; }
+.phone-prefix { font-size: 16px; font-weight: 600; color: #555; white-space: nowrap; }
+
+.phone-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+  outline: none;
+  font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.phone-input::placeholder { color: #bbb; font-weight: 400; }
+
+.phone-msg {
+  font-size: 12px;
+  font-weight: 500;
+  color: #e63000;
+  min-height: 16px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.sms-toast {
+  background: #1c1c2e;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.sms-icon { font-size: 20px; margin-top: 2px; }
+
+.sms-sender {
+  font-size: 10px;
+  font-weight: 700;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.sms-text {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.sms-otp {
+  font-weight: 800;
+  color: #ff6b35;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.otp-input {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 10px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 16px;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fafafa;
+}
+
+.otp-input:focus    { border-color: #ff6b35; background: #fff; }
+.otp-input.is-error { border-color: #e63000; background: #fff8f7; }
+.otp-input.is-ok    { border-color: #00b86b; background: #f4fdf8; }
+
+.timer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  color: #aaa;
+  min-height: 22px;
+}
+
+.timer-count { font-weight: 700; color: #ff6b35; }
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff6b35, #e63000);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(255,107,53,0.30);
+}
+
+.btn-primary:active { opacity: 0.9; transform: scale(0.98); }
+
+.btn-resend {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff6b35;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: inherit;
+  padding: 0;
+}
+
+.btn-resend:disabled {
+  color: #ccc;
+  text-decoration: none;
+  cursor: default;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px;
+  background: #f0f2f5;
+  color: #333;
+  border: none;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover { background: #e5e7eb; }
+
+.msg {
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 18px;
+  margin-bottom: 10px;
+}
+
+.msg.error   { color: #e63000; }
+.msg.success { color: #00b86b; }
+
+.attempts-left {
+  font-size: 11px;
+  color: #bbb;
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+
+.success-icon  { font-size: 64px; margin-bottom: 16px; }
+
+.success-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #00b86b;
+  margin-bottom: 10px;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.success-badge {
+  display: inline-block;
+  background: #e8faf2;
+  color: #00b86b;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 440px) {
+  .screen      { padding: 28px 20px; border-radius: 16px; }
+  h1           { font-size: 19px; }
+  .otp-input   { font-size: 24px; letter-spacing: 10px; }
+  .btn-primary { padding: 14px; font-size: 14px; }
+}

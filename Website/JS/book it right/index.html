@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    /* =============================================
+    PRE-WRITTEN HELPERS — Do not change
+    ============================================= */
+
+    function selectShow(el) {
+    document.querySelectorAll(".showtime").forEach(function(s) {
+    s.classList.remove("selected");
+    });
+    el.classList.add("selected");
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("tickets").addEventListener("input", function() {
+    var t = this.value;
+    document.getElementById("s-tickets").textContent = t ? t + " × ₹299" : "—";
+    document.getElementById("s-total").textContent = t ? "₹ " + (t * 299) : "—";
+    });
+    document.getElementById("seat").addEventListener("input", function() {
+    document.getElementById("s-seat").textContent = this.value ? "Seat " + this.value : "—";
+    });
+    });
+
+
+    /* =============================================
+    YOUR TASK — Write your code below
+    ============================================= */
+
+    function checkField(inputId, fieldId, msgId) {
+    var input = document.getElementById(inputId);
+    var field = document.getElementById(fieldId);
+    var msg = document.getElementById(msgId);
+    if (!input.checkValidity()) {
+    field.className = "field error";
+    msg.textContent = "❌ " + input.validationMessage;
+    return false;
+    } else {
+    field.className = "field valid";
+    msg.textContent = "✓ Valid";
+    return true;
+    }
+    }
+
+    function confirmBooking() {
+    var t1 = checkField("tickets", "f-tickets", "m-tickets");
+    var t2 = checkField("seat", "f-seat", "m-seat");
+    var t3 = checkField("mobile", "f-mobile", "m-mobile");
+    var t4 = checkField("email", "f-email", "m-email");
+
+    if (t1 && t2 && t3 && t4) {
+    var tickets = document.getElementById("tickets").value;
+    var seat = document.getElementById("seat").value;
+    var email = document.getElementById("email").value;
+    var show = document.querySelector(".showtime.selected").textContent;
+    var el = document.getElementById("confirm");
+    el.style.display = "block";
+    el.innerHTML =
+    "✅ <strong>Booking Confirmed!</strong><br>" +
+    "🎬 Galactic Storm — IMAX 3D · " + show + "<br>" +
+    "🎟 " + tickets + " ticket(s) · Seat " + seat + "<br>" +
+    "💳 Total paid: ₹" + (tickets * 299) + "<br>" +
+    "📩 E-ticket sent to <strong>" + email + "</strong>";
+    }
+    }
+</body>
+
+</html>

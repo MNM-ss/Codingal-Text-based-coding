@@ -26,14 +26,15 @@
         margin: 0;
 
         font-family: Arial, Helvetica, sans-serif;
-
+        background-color: darkmagenta;
     }
+
 
     nav {
 
         overflow: hidden;
 
-        background-color: rgb(0, 255, 115);
+        background-color: rgb(104, 64, 185);
 
     }
 
@@ -41,7 +42,7 @@
 
         float: left;
 
-        color: rgb(255, 111, 0);
+        color: rgb(232, 178, 137);
 
         text-align: center;
 
@@ -84,6 +85,80 @@
         color: white;
         text-align: center;
     }
+
+    .pimg1,
+    .pimg2,
+    .pimg3 {
+        position: relative;
+        opacity: 0.7;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .pimg1 {
+        background-image: url('1pic.png');
+        min-height: 100%;
+    }
+
+    .pimg2 {
+        background-image: url('2pic.png');
+        min-height: 400px;
+    }
+
+    .pimg3 {
+        background-image: url('3pic.png');
+        min-height: 400px;
+    }
+
+    .section {
+        text-align: center;
+        padding: 50px 80px;
+        background-color: rgb(252, 231, 206);
+
+    }
+
+    .section-light {
+        background-color: f4f4f4;
+        color: #666;
+    }
+
+    .section-dark {
+        background-color: #e4dbc2;
+        color: #ddd;
+    }
+
+    .ptext {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #19031a;
+        background-color: blueviolet;
+        font-size: 27px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+
+    .ptextborder {
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .ptext .border.trans {
+        background-color: transparent;
+    }
+
+    @media (max-width:568px) {
+
+        .pimg1,
+        .pimg2,
+        .pimg3 {
+            background-attachment: scroll;
+        }
+    }
 </style>
 
 <body>
@@ -120,13 +195,28 @@
 
     </nav>
 
-    <main></main>
+    <main>
+        <section class="section section-dark">
+            <h2 style="color: rgb(44, 3, 36);"">Section One</h2>
+            <p style=" color: rgb(36, 18, 67);">The smell of rain hitting dry pavement is called petrichor. It’s caused
+                by soil bacteria releasing a
+                specific compound
+                when hit by water.</p>
+        </section>
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border trans">The perfect
+                    bedroom</span>
+
+            </div>
+        </div>
+    </main>
 
     <footer></footer>
 
 
-    <div class="footer">
-        <p>@copy all rights and reserved by Swati Singh</p>
+    <div class=" footer">
+        <p>@copy all rights and reserved by MNM</p>
     </div>
 
 

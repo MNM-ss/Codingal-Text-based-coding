@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aoereta</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        nav {
+
+            overflow: hidden;
+
+            background-color: rgb(255, 227, 186);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: sticky;
+            top: 0;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        }
+
+        nav a {
+            color: rgb(8, 7, 56);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            border-radius: 20px;
+            border-color: #565891;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        nav a:hover {
+
+            background-color: #ddd;
+            transform: scale(1.1);
+            color: black;
+
+        }
+
+        nav a:active {
+
+            background-color: #565891;
+
+            color: rgb(238, 208, 181);
+
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            background-color: rgb(12, 7, 49);
+            color: rgb(251, 242, 232);
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            z-index: 1030;
+        }
+
+        .jumbotron {
+            color: rgb(246, 240, 230);
+            background-color: rgb(5, 0, 55);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            padding-top: 120px;
+            padding-bottom: 30px;
+
+
+            text-shadow: 0 0 16px rgba(181, 159, 127, 0.5);
+        }
+
+
+        .jumbotron-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+
+        .jumbotron-link:hover {
+            color: rgb(255, 227, 186);
+            text-decoration: none;
+            transform: scale(1.02);
+        }
+
+
+        .mini-bar {
+            background-color: rgb(57, 53, 99);
+            color: rgb(251, 242, 232);
+            padding: 10px 0;
+            font-size: 9px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .mini-bar2 {
+            background-color: rgb(255, 255, 255);
+            color: rgb(251, 242, 232);
+            padding: 4px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pimg1,
+        .pimg2,
+        .pimg3 {
+            position: relative;
+            opacity: 0.7;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .pimg1 {
+            background-image: url('1pic.png');
+            min-height: 100%;
+        }
+
+        .pimg2 {
+            background-image: url('2pic.png');
+            min-height: 400px;
+        }
+
+        .pimg3 {
+            background-image: url('3pic.png');
+            min-height: 400px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+            background-color: rgb(252, 231, 206);
+
+        }
+
+        .section-light {
+            background-color: f4f4f4;
+            color: #666;
+        }
+
+        .section-dark {
+            background-color: #dadada;
+            color: #ddd;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #19031a;
+            background-color: rgb(8, 3, 38);
+            font-size: 27px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptextborder {
+            background-color: #111;
+            color: #f6eec7;
+            padding: 20px;
+        }
+
+        .ptext .border.trans {
+            background-color: transparent;
+        }
+
+        .agency-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+        }
+
+        @media (max-width:568px) {
+
+            .pimg1,
+            .pimg2,
+            .pimg3 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #fff9ec;">
+
+
+    <header>
+        <div class="jumbotron jumbotron-fluid text-center mb-0">
+            <div class="container">
+
+                <h1 style="font-size: 80px;">
+                    <a href="index.html" class="jumbotron-link">˖᯽ ݁˖ M.O.M Agency ˖᯽ ݁˖</a>
+                </h1>
+                <p style="letter-spacing: 2px; font-size: 22px">MISSION OPERATION MANAGEMENT AGENCY</p>
+            </div>
+        </div>
+
+
+        <div class="mini-bar">
+            <div class="container">
+                <p
+                    style="letter-spacing: 2px; font-family:Verdana, Geneva, Tahoma, sans-serif; margin: 0; font-size: 0.9rem; ">
+                    ✮⋆˙ Dedicated to finding mom ⋆˙⟡
+                </p>
+            </div>
+        </div>
+
+        <nav>
+
+            <a class="active" href="index.html">Home</a>
+
+            <a href="Aboutus.html">About us</a>
+
+            <a href="Gallery.html">Gallery</a>
+
+            <a href="contactus.html">Contact us</a>
+
+        </nav>
+
+        <main style="padding-bottom: 120px;">
+            <section class="section section-dark">
+                <h2 style="color: rgb(20, 17, 72); font-family: Impact, sans-serif; margin-bottom: 30px;"> What is M.O.M
+                    ?
+                </h2>
+                <div class="agency-content">
+                    <p style="color: rgb(41, 19, 80); margin-bottom: 20px; font-size: 20px;">
+                        M.O.M. stands for "Missions Operation Management". The agency was founded and run by the Nelson
+                        siblings' Mom until her disappearance. Now Shiloh and her siblings run the agency with a growing
+                        collection of agents.
+                    </p>
+                    <p style="color: rgb(36, 18, 67); margin-bottom: 0; font-size: 20px;">
+                        The agency responds to and monitors distress calls from numerous worlds called <b>Raelos</b> -
+                        combatting evil and fighting for truth and justice. They willingly appear in these different
+                        Raelos to combat the problems it’s people or the environment is facing.
+                    </p>
+                </div>
+            </section>
+
+            <div style="height: 150px; margin-bottom: 150px;"></div>
+
+            <div class="pimg3">
+                <div class="ptext">
+                    <span class="border trans">The perfect bedroom</span>
+                </div>
+            </div>
+        </main>
+
+
+        <div class="footer">
+            <p class="mb-0" style="padding: 10px 0;">All Rights reserved by M.O.M Agency</p>
+        </div>
+
+</body>
+
+</html>

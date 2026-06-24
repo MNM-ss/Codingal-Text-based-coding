@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>website
+    <title>Aoereta
 
     </title>
 
@@ -30,49 +30,74 @@
     }
 
     nav {
+        background-color: rgb(75, 105, 69);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: sticky;
+        top: 0;
+        padding: 15px 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 9px solid rgb(214, 203, 187);
+        z-index: 1040;
+    }
 
-        overflow: hidden;
+    .nav-logo-left {
+        display: flex;
+        align-items: center;
+    }
 
-        background-color: rgb(49, 38, 96);
+    .nav-logoimg {
+        height: 60px;
+        width: auto;
+        display: inline-block;
+    }
 
+    .nav-links-right {
+        display: flex;
+        align-items: center;
     }
 
     nav a {
-
-        float: left;
-
-        color: rgb(226, 199, 150);
-
+        color: rgb(214, 203, 187);
         text-align: center;
-
-        padding: 14px 16px;
-
+        padding: 0px 16px;
         text-decoration: none;
-
-        font-size: 17px;
-
+        font-size: 25px;
+        border-radius: 20px;
+        border-color: #2a502d;
+        display: inline-block;
+        transition: transform 0.2s ease-in-out;
     }
 
     nav a:hover {
-
-        background-color: #ddd;
-
-        color: black;
-
+        background-color: rgb(214, 203, 187);
+        transform: scale(1.1);
+        color: rgb(75, 105, 69);
+        text-decoration: none;
     }
 
     nav a:active {
-
-        background-color: #ffe066;
-
-        color: black;
-
+        background-color: #2f4727;
+        color: rgb(238, 208, 181);
     }
 
-    .jumbotron {
-        background-color: mediumpurple;
-        margin-bottom: 0;
+    .hamburger-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
 
+    .hamburger-bar {
+        width: 100%;
+        height: 3px;
+        background-color: rgb(214, 203, 187);
+        border-radius: 2px;
     }
 
     .footer {
@@ -80,50 +105,109 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: black;
-        color: white;
+        background-color: rgb(69, 87, 60);
+        color: rgb(251, 242, 232);
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        z-index: 1030;
+    }
+
+    .jumbotron {
+        color: rgb(246, 240, 230);
+        background-color: rgb(39, 56, 35);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-top: 120px;
+        padding-bottom: 30px;
+        height: 800px;
+        text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+        margin-top: 100px;
+        padding-top: 300px;
+        background-image: url(background3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .jumbotron-link {
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .jumbotron-link:hover {
+        color: rgb(255, 227, 186);
+        text-decoration: none;
+        transform: scale(1.02);
+    }
+
+    .mini-bar {
+        background-color: rgb(44, 60, 39);
+        color: rgb(251, 242, 232);
+        padding: 10px 0;
+        font-size: 9px;
+        width: 100%;
         text-align: center;
     }
 
     .col {
         text-align: center;
         border: 1px solid black;
+        background-color: #c1cfc2;
+    }
+
+    .body {
+        background-color: rgb(235, 230, 210);
     }
 </style>
 
-<body>
-
-    <header>
-
-        <div class="jumbotron jumbotron-fluid">
-
-            <div class="container">
-
-                <h1 style="color: rgb(246, 233, 207);">
-
-                    AI Tool
-
-                </h1>
-
-                <p style="color: darkblue;">You can use this AI in your work</p>
-
-            </div>
-
-        </div>
-
-    </header>
+<body style="background-color: #fff9ec;">
 
     <nav>
+        <div class="nav-logo-left">
+            <a href="home.html">
+                <img src="icon.png" style="height: 65px; width: auto; border: none; padding: 0px;">
+            </a>
+        </div>
 
-        <a href="index.html">Home</a>
+        <div class="nav-links-right">
+            <a class="active" href="home.html">Home</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="contactus.html">Contact us</a>
 
-        <a class="active" href="Aboutus.html">About us</a>
-
-        <a href="Gallery.html">Gallery</a>
-
-        <a href="contactus.html">Contact us</a>
-
+            <div class="hamburger-container">
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+            </div>
+        </div>
     </nav>
+
+    <header>
+        <div class="jumbotron jumbotron-fluid text-center mb-0">
+            <div class="container">
+                <h1 style="font-size: 80px;">
+                    <a href="pop.html" class="jumbotron-link"
+                        style=" font-size: 7rem;letter-spacing: 4px;background-color: #2d3b29;">˖᯽ ݁˖
+                        AOERETA ˖᯽ ݁˖</a>
+                </h1>
+                <p style="letter-spacing: 2px; font-size: 22px;">The perfect place for a treat!</p>
+
+
+            </div>
+        </div>
+
+        <div class="mini-bar">
+            <div class="container">
+                <p
+                    style="letter-spacing: 2px; font-family:Verdana, Geneva, Tahoma, sans-serif; margin: 0; font-size: 0.9rem;">
+                    ✮⋆˙ Dedicated to feed your sweetest cravings! ⋆˙⟡
+                </p>
+            </div>
+        </div>
+    </header>
 
     <main>
         <br>
@@ -138,11 +222,11 @@
                     <div class="container">
                         <div class="card" style="width: 18rem;">
 
-                            <img class="card-img-top" src="profilepic.png" alt="Card image cap">
+                            <img class="card-img-top" src="crl6.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Manha Nusayba</h5>
                                 <p class="card-text">Passionate about programming.</p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn btn-primary" style="background-color: #2a502d;">See Profile</a>
                             </div>
                         </div>
                     </div>
@@ -151,11 +235,11 @@
                     <div class="container">
                         <div class="card" style="width: 18rem;">
 
-                            <img class="card-img-top" src="profilepic.png" alt="Card image cap">
+                            <img class="card-img-top" src="crl4.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Manha Nusayba</h5>
                                 <p class="card-text">Passionate about programming.</p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn btn-primary " style="background-color: #2a502d;">See Profile</a>
                             </div>
                         </div>
                     </div>
@@ -164,11 +248,11 @@
                     <div class="container">
                         <div class="card" style="width: 18rem;">
 
-                            <img class="card-img-top" src="profilepic.png" alt="Card image cap">
+                            <img class="card-img-top" src="crl5.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Manha Nusayba</h5>
                                 <p class="card-text">Passionate about programming.</p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
+                                <a href="#" class="btn btn-primary" style="background-color: #2a502d;""> See Profile </a>
                             </div>
                         </div>
                     </div>
@@ -180,9 +264,9 @@
     <footer></footer>
 
 
-    <div class="footer">
-        <p>@copy all rights and reserved by MNM</p>
-    </div>
+    <div class=" footer">
+                                    <p>@copy all rights and reserved by MNM</p>
+                            </div>
 
 
 

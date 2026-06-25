@@ -5,47 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aoereta</title>
+    <!-- Bootstrap 4 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <style>
+        /* Base Reset & Background Setup */
+        html,
         body {
-            margin-top: 100px;
+            height: 100%;
+            margin: 0;
             padding: 0;
-            background-image: url(intro_background.jpg);
+            overflow-x: hidden;
+        }
+
+        body {
+            background-image: url('intro_background.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
 
-        .ent-btn:hover {
-            font-size: 3.8rem !important;
+        /* Full Screen Flex Container */
+        .hero-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            /* Subtle overlay to make text pop against background */
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Typography */
+        .hero-title {
+            color: rgb(74, 38, 18);
+            font-size: calc(2.5rem + 3.5vw);
+            /* Responsive font size */
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-subtitle {
+            color: rgb(115, 66, 34);
+            font-size: calc(1.2rem + 0.8vw);
+            /* Responsive font size */
+            margin-bottom: 3rem;
+            font-family: serif;
+            line-height: 1.6;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Button Styling */
+        .ent-btn {
+            display: inline-block;
+            background-color: rgb(74, 38, 18);
             color: rgb(255, 255, 255) !important;
-            text-decoration: none;
+            text-decoration: none !important;
+            padding: 1rem 3rem;
+            font-size: calc(1.2rem + 1vw);
+            /* Responsive font size */
+            font-weight: bold;
+            border-radius: 50px;
+            font-family: serif;
+            box-shadow: 0 8px 20px rgba(74, 38, 18, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Button Hover & Active States */
+        .ent-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(74, 38, 18, 0.4);
+            background-color: rgb(94, 48, 23);
         }
 
         .ent-btn:active {
-            transform: scale(0.95);
-            background-color: rgb(163, 126, 101) !important;
+            transform: scale(0.98) translateY(1px);
+            box-shadow: 0 5px 10px rgba(74, 38, 18, 0.4);
+        }
+
+        /* Simple entry animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div
-        style="height: 100vh; display: flex;justify-content: center; width: 100vw; text-align: center; padding-top: 15vh;">
-        <div>
-            <br><br><br>
-            <h1
-                style="color: rgb(74, 38, 18); font-size: 6rem; font-weight: bold; margin-bottom: 1rem; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; letter-spacing: 0.2px;">
-                ⋆✮ Welcome to Aoereta! ✮⋆</h1>
-            <p style="color: rgb(115, 66, 34); font-size: 2rem; margin-bottom: 2.5rem; font-family: serif;">
-                Looking for the most scrumptios yet affordable baked goods? <br>Then Aoereta is the
-                perfect place to give yourself a treat!</p><br><br><br>
-            <a class="ent-btn" href="home.html"
-                style="display: inline-block; background-color: rgb(74, 38, 18); color: rgb(255, 255, 255); text-decoration: none; padding: 1.2rem 3.5rem; font-size: 3.5rem; font-weight: bold; border-radius: 30px; font-family: serif; box-shadow: 0 8px 15px rgb(134, 127, 127); transition: all 0.3s ease;">Feed
-                Your Cravings »</a>
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">⋆✮ Welcome to Aoereta! ✮⋆</h1>
+            <p class="hero-subtitle">
+                Looking for the most scrumptious yet affordable baked goods? <br>
+                Then Aoereta is the perfect place to give yourself a treat!
+            </p>
+            <a class="ent-btn" href="home.html">Feed Your Cravings »</a>
         </div>
+
     </div>
 
 </body>

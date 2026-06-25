@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aoereta</title>
 
+    <!-- Bootstrap 4 CSS & JS Libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style>
+        /* Base Setup & Document Defaults */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff9ec;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+        }
+
+        /* Fixed / Sticky Navigation Bar */
         nav {
             background-color: rgb(75, 105, 69);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -24,15 +36,11 @@
             z-index: 1040;
         }
 
-        .nav-logo-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-logoimg {
-            height: 60px;
+        .nav-logo-left img {
+            height: 65px;
             width: auto;
-            display: inline-block;
+            border: none;
+            padding: 0;
         }
 
         .nav-links-right {
@@ -43,20 +51,18 @@
         nav a {
             color: rgb(214, 203, 187);
             text-align: center;
-            padding: 0px 16px;
-            text-decoration: none;
-            font-size: 25px;
+            padding: 5px 16px;
+            text-decoration: none !important;
+            font-size: 22px;
             border-radius: 20px;
-            border-color: #2a502d;
             display: inline-block;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
         }
 
         nav a:hover {
             background-color: rgb(214, 203, 187);
-            transform: scale(1.1);
+            transform: scale(1.05);
             color: rgb(75, 105, 69);
-            text-decoration: none;
         }
 
         nav a:active {
@@ -64,6 +70,7 @@
             color: rgb(238, 208, 181);
         }
 
+        /* Hamburger Menu Icon */
         .hamburger-container {
             display: flex;
             flex-direction: column;
@@ -81,154 +88,156 @@
             border-radius: 2px;
         }
 
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgb(69, 87, 60);
-            color: rgb(251, 242, 232);
-            text-align: center;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            z-index: 1030;
-        }
-
-        .jumbotron {
+        /* Hero Header (Jumbotron Alternative Layout) */
+        .jumbotron-custom {
             color: rgb(246, 240, 230);
-            background-color: rgb(39, 56, 35);
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            padding-top: 120px;
-            padding-bottom: 30px;
-            height: 800px;
-            text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
-            margin-top: 100px;
-            padding-top: 300px;
-            background-image: url(background3.jpg);
+            font-family: Impact, Haettenschweiler, sans-serif;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+            background-image: linear-gradient(rgba(39, 56, 35, 0.45), rgba(39, 56, 35, 0.45)), url('background3.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-
+            text-align: center;
+            padding: 2rem;
         }
 
         .jumbotron-link {
             color: inherit;
-            text-decoration: none;
+            text-decoration: none !important;
             display: inline-block;
-            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+            font-size: calc(2.5rem + 4vw);
+            letter-spacing: 4px;
+            background-color: rgba(45, 59, 41, 0.85);
+            padding: 10px 30px;
+            border-radius: 4px;
+            transition: color 0.2s, transform 0.2s;
         }
 
         .jumbotron-link:hover {
             color: rgb(255, 227, 186);
-            text-decoration: none;
             transform: scale(1.02);
         }
 
+        .jumbotron-subtitle {
+            letter-spacing: 2px;
+            font-size: calc(1.1rem + 0.5vw);
+            margin-top: 20px;
+        }
+
+        /* Decorative Sub-Bar */
         .mini-bar {
             background-color: rgb(44, 60, 39);
             color: rgb(251, 242, 232);
-            padding: 10px 0;
-            font-size: 9px;
+            padding: 12px 0;
             width: 100%;
             text-align: center;
         }
 
-        .mini-bar2 {
-            background-color: rgb(255, 255, 255);
-            color: rgb(251, 242, 232);
-            padding: 4px 0;
-            width: 100%;
-            text-align: center;
+        .mini-bar p {
+            letter-spacing: 2px;
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0;
+            font-size: 0.9rem;
         }
 
-        .pimg1,
-        .pimg2,
-        .pimg3 {
-            position: relative;
-            opacity: 0.7;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .pimg1 {
-            background-image: url('1pic.png');
-            min-height: 100%;
-        }
-
-        .pimg2 {
-            background-image: url('2pic.png');
-            min-height: 400px;
-        }
-
-        .pimg3 {
-            background-image: url('crl1.jpg');
-            min-height: 300px;
-        }
-
-        .section {
-            text-align: center;
-            background-color: rgb(252, 231, 206);
-        }
-
-        .section-light {
-            background-color: #f4f4f4;
-            color: #ffffff;
+        /* Main Content Grid */
+        main {
+            padding: 40px 0;
         }
 
         .section-dark {
             background-color: #dadada;
-            color: #f3f3e5;
-        }
-
-        .ptext {
-            position: absolute;
-            top: 50%;
-            width: 100%;
+            color: #333333;
+            padding: 60px 20px;
             text-align: center;
-            color: #19031a;
-            background-color: rgb(8, 3, 38);
-            font-size: 27px;
-            letter-spacing: 8px;
-            text-transform: uppercase;
         }
 
-        .ptextborder {
-            background-color: #2e1f1f;
-            color: #f6eec7;
-            padding: 20px;
-        }
-
-        .ptext .border.trans {
-            background-color: transparent;
+        .section-title {
+            color: rgb(21, 72, 17);
+            font-family: Impact, sans-serif;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
         }
 
         .agency-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
             line-height: 1.8;
-            font-size: 1.1rem;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
         }
 
-        @media (max-width:568px) {
+        .agency-content p {
+            color: rgb(47, 61, 42);
+            margin-bottom: 24px;
+            font-size: 1.2rem;
+        }
 
-            .pimg1,
-            .pimg2,
+        /* Parallax Visual Section Break */
+        .pimg3 {
+            position: relative;
+            height: 350px;
+            background-image: url('crl1.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .ptext-box {
+            background-color: #2f4727;
+            color: #f6eec7;
+            font-size: 24px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sticky Footer */
+        .footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(69, 87, 60);
+            color: rgb(251, 242, 232);
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            z-index: 1030;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Mobile Viewports Fixes */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
             .pimg3 {
                 background-attachment: scroll;
+                /* Disables parallax on mobile to prevent graphics glitches */
+                height: 250px;
             }
         }
     </style>
 </head>
 
-<body style="background-color: #fff9ec;">
+<body>
 
+    <!-- Navigation Header -->
     <nav>
         <div class="nav-logo-left">
             <a href="home.html">
-                <img src="icon.png" style="height: 65px; width: auto; border: none; padding: 0px;">
+                <img src="icon.png" alt="Aoereta Logo">
             </a>
         </div>
 
@@ -246,64 +255,57 @@
         </div>
     </nav>
 
+    <!-- Main Branding Header Block -->
     <header>
-        <div class="jumbotron jumbotron-fluid text-center mb-0">
+        <div class="jumbotron-custom">
             <div class="container">
-                <h1 style="font-size: 80px;">
-                    <a href="pop.html" class="jumbotron-link"
-                        style=" font-size: 7rem;letter-spacing: 4px;background-color: #2d3b29;">˖᯽ ݁˖
-                        AOERETA ˖᯽ ݁˖</a>
-                </h1>
-                <p style="letter-spacing: 2px; font-size: 22px;">The perfect place for a treat!</p>
-
-
+                <a href="pop.html" class="jumbotron-link">˖᯽ ݁˖ AOERETA ˖᯽ ݁˖</a>
+                <p class="jumbotron-subtitle">The perfect place for a treat!</p>
             </div>
         </div>
 
         <div class="mini-bar">
             <div class="container">
-                <p
-                    style="letter-spacing: 2px; font-family:Verdana, Geneva, Tahoma, sans-serif; margin: 0; font-size: 0.9rem;">
-                    ✮⋆˙ Dedicated to feed your sweetest cravings! ⋆˙⟡
-                </p>
+                <p>✮⋆˙ Dedicated to feed your sweetest cravings! ⋆˙⟡</p>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 7px;">
-        <section class="section section-dark">
-            <br><br>
-            <h1 style="color: rgb(21, 72, 17); font-family: Impact, sans-serif; margin-bottom: 30px;"> What is Aoereta ?
-            </h1>
-            <div class="agency-content">
-                <p style="color: rgb(47, 61, 42); margin-bottom: 20px; font-size: 20px;">
-                    Passionate Baker with over 6 years of experience handcrafting artisan breads and pastries. Proven
-                    track record of
-                    developing innovative menu items, resulting in a 25% increase in seasonal sales. Expert in
-                    fermentation techniques,
-                    dough lamination, and maintaining strict food safety standards.
-                </p>
-                <p style="color: rgb(50, 63, 48); margin-bottom: 0; font-size: 20px;">
-                    Creative Cake Decorator with 5 years of experience producing bespoke custom cakes for special
-                    events. Decorated over 200
-                    custom cakes monthly, increasing customer satisfaction ratings by 20%. Possesses a keen eye for
-                    detail and advanced
-                    skills in fondant, buttercream, and sugar work.
-                </p>
+    <!-- Core Page Content -->
+    <main>
+        <section class="section-dark">
+            <div class="container">
+                <h1 class="section-title">What is Aoereta?</h1>
+
+                <div class="agency-content">
+                    <p>
+                        Passionate Baker with over 6 years of experience handcrafting artisan breads and pastries.
+                        Proven
+                        track record of developing innovative menu items, resulting in a 25% increase in seasonal sales.
+                        Expert in fermentation techniques, dough lamination, and maintaining strict food safety
+                        standards.
+                    </p>
+                    <p>
+                        Creative Cake Decorator with 5 years of experience producing bespoke custom cakes for special
+                        events. Decorated over 200 custom cakes monthly, increasing customer satisfaction ratings by
+                        20%.
+                        Possesses a keen eye for detail and advanced skills in fondant, buttercream, and sugar work.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <div style="height: 150px; margin-bottom: 150px;"></div>
-
+        <!-- Parallax Accent Section Break -->
         <div class="pimg3">
-            <div class="ptext">
-                <span class="border trans" style="background-color: #2f4727; color: #f6eec7;">The perfect treat!</span>
+            <div class="ptext-box">
+                The perfect treat!
             </div>
         </div>
     </main>
 
+    <!-- Safe-Stacking Site Footer -->
     <div class="footer">
-        <p class="mb-0" style="padding: 10px 0;">All Rights reserved by <b>Aoereta<sup>TM</sup></b></p>
+        <p class="mb-0" style="padding: 12px 0;">©All Rights reserved by <b>Aoereta<sup>TM</sup></b></p>
     </div>
 
 </body>

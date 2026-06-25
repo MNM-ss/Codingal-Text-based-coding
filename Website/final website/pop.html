@@ -5,17 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pop</title>
+    <style>
+        /* Reset and full-viewport centering */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Content container */
+        .content-wrapper {
+            max-width: 90%;
+            padding: 20px;
+        }
+
+        /* Responsive image setup */
+        .content-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 24px auto;
+            /* Centers image and gives space below */
+        }
+
+        /* Typography */
+        .threat-text {
+            color: #8B4513;
+            /* A rich, distinct brown */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            /* Scales beautifully */
+            margin: 0;
+        }
+    </style>
 </head>
 
-<body style="background-color: black;">
-    <center> <img src="hostage.png">
-        <br>
-        <p
-            style="color: brown; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bold; font-size: larger;">
-            Buy from us or this is what will happen to you :)</p>
+<body>
 
+    <div class="content-wrapper">
+        <img src="hostage.png" alt="Hostage Situation Warning">
+        <p class="threat-text">Buy from us or this is what will happen to you :)</p>
+    </div>
 
-    </center>
 </body>
 
 </html>

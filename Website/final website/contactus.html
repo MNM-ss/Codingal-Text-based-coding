@@ -1,171 +1,209 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aoereta - Contact Us</title>
 
-    <title>Aoereta
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    </title>
+    <style>
+        /* Document Configurations */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff9ec;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        /* Sticky Navigation Bar */
+        nav {
+            background-color: rgb(75, 105, 69);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+            position: sticky;
+            top: 0;
+            padding: 15px 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 9px solid rgb(214, 203, 187);
+            z-index: 1040;
+        }
+
+        .nav-logo-left img {
+            height: 65px;
+            width: auto;
+            border: none;
+        }
+
+        .nav-links-right {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgb(214, 203, 187);
+            text-align: center;
+            padding: 5px 16px;
+            text-decoration: none !important;
+            font-size: 22px;
+            border-radius: 20px;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgb(214, 203, 187);
+            transform: scale(1.05);
+            color: rgb(75, 105, 69);
+        }
+
+        nav a:active {
+            background-color: #2f4727;
+            color: rgb(238, 208, 181);
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .hamburger-bar {
+            width: 100%;
+            height: 3px;
+            background-color: rgb(214, 203, 187);
+            border-radius: 2px;
+        }
+
+        /* Hero Image Header Section */
+        .jumbotron-custom {
+            color: rgb(246, 240, 230);
+            font-family: Impact, Haettenschweiler, sans-serif;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+            background-image: linear-gradient(rgba(39, 56, 35, 0.45), rgba(39, 56, 35, 0.45)), url('background3.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .jumbotron-link {
+            color: inherit;
+            text-decoration: none !important;
+            display: inline-block;
+            font-size: calc(2.2rem + 3.5vw);
+            letter-spacing: 4px;
+            background-color: rgba(45, 59, 41, 0.85);
+            padding: 10px 30px;
+            border-radius: 4px;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .jumbotron-link:hover {
+            color: rgb(255, 227, 186);
+            transform: scale(1.02);
+        }
+
+        .jumbotron-subtitle {
+            letter-spacing: 2px;
+            font-size: calc(1.1rem + 0.5vw);
+            margin-top: 20px;
+        }
+
+        .mini-bar {
+            background-color: rgb(44, 60, 39);
+            color: rgb(251, 242, 232);
+            padding: 12px 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mini-bar p {
+            letter-spacing: 2px;
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Form & Content Elements */
+        .contact-heading {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(39, 49, 33);
+            font-weight: bold;
+        }
+
+        .contact-text {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(56, 64, 46);
+            font-size: 1.25rem;
+        }
+
+        /* Fluid Map Container */
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .map-container iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Safe Stacking Footer */
+        .footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(69, 87, 60);
+            color: rgb(251, 242, 232);
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            z-index: 1030;
+            padding: 15px 0;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-
-</script>
-
-<style>
-    body {
-
-        margin: 0;
-        background-color: rgb(224, 224, 209);
-        font-family: Arial, Helvetica, sans-serif;
-
-    }
-
-    nav {
-        background-color: rgb(75, 105, 69);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        position: sticky;
-        top: 0;
-        padding: 15px 30px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 9px solid rgb(214, 203, 187);
-        z-index: 1040;
-    }
-
-    .nav-logo-left {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-logoimg {
-        height: 60px;
-        width: auto;
-        display: inline-block;
-    }
-
-    .nav-links-right {
-        display: flex;
-        align-items: center;
-    }
-
-    nav a {
-        color: rgb(214, 203, 187);
-        text-align: center;
-        padding: 0px 16px;
-        text-decoration: none;
-        font-size: 25px;
-        border-radius: 20px;
-        border-color: #2a502d;
-        display: inline-block;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-        background-color: rgb(214, 203, 187);
-        transform: scale(1.1);
-        color: rgb(75, 105, 69);
-        text-decoration: none;
-    }
-
-    nav a:active {
-        background-color: #2f4727;
-        color: rgb(238, 208, 181);
-    }
-
-    .hamburger-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-        margin-left: 20px;
-    }
-
-    .hamburger-bar {
-        width: 100%;
-        height: 3px;
-        background-color: rgb(214, 203, 187);
-        border-radius: 2px;
-    }
-
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(69, 87, 60);
-        color: rgb(251, 242, 232);
-        text-align: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        z-index: 1030;
-    }
-
-    .jumbotron {
-        color: rgb(246, 240, 230);
-        background-color: rgb(39, 56, 35);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        padding-top: 120px;
-        padding-bottom: 30px;
-        height: 800px;
-        text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
-        margin-top: 100px;
-        padding-top: 300px;
-        background-image: url(background3.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
-
-    .jumbotron-link {
-        color: inherit;
-        text-decoration: none;
-        display: inline-block;
-        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-
-    .jumbotron-link:hover {
-        color: rgb(255, 227, 186);
-        text-decoration: none;
-        transform: scale(1.02);
-    }
-
-    .mini-bar {
-        background-color: rgb(44, 60, 39);
-        color: rgb(251, 242, 232);
-        padding: 10px 0;
-        font-size: 9px;
-        width: 100%;
-        text-align: center;
-    }
-</style>
 
 <body>
 
     <nav>
         <div class="nav-logo-left">
             <a href="home.html">
-                <img src="icon.png" style="height: 65px; width: auto; border: none; padding: 0px;">
+                <img src="icon.png" alt="Aoereta Logo">
             </a>
         </div>
 
         <div class="nav-links-right">
-            <a class="active" href="home.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="Aboutus.html">About us</a>
             <a href="Gallery.html">Gallery</a>
-            <a href="contactus.html">Contact us</a>
+            <a class="active" href="contactus.html">Contact us</a>
 
             <div class="hamburger-container">
                 <div class="hamburger-bar"></div>
@@ -176,62 +214,37 @@
     </nav>
 
     <header>
-        <div class="jumbotron jumbotron-fluid text-center mb-0">
+        <div class="jumbotron-custom">
             <div class="container">
-                <h1 style="font-size: 80px;">
-                    <a href="pop.html" class="jumbotron-link"
-                        style=" font-size: 7rem;letter-spacing: 4px;background-color: #2d3b29;">˖᯽ ݁˖
-                        AOERETA ˖᯽ ݁˖</a>
-                </h1>
-                <p style="letter-spacing: 2px; font-size: 22px; text-shadow: #2d3b29;">Perferct for a scrumptious treat!
-                </p>
-
-
+                <a href="pop.html" class="jumbotron-link">˖᯽ ݁˖ AOERETA ˖᯽ ݁˖</a>
+                <p class="jumbotron-subtitle">Perfect for a scrumptious treat!</p>
             </div>
         </div>
 
         <div class="mini-bar">
             <div class="container">
-                <p
-                    style="letter-spacing: 2px; font-family:Verdana, Geneva, Tahoma, sans-serif; margin: 0; font-size: 0.9rem;">
-                    ✮⋆˙ Dedicated to feed your sweetest cravings! ⋆˙⟡
-                </p>
+                <p>✮⋆˙ Dedicated to feed your sweetest cravings! ⋆˙⟡</p>
             </div>
         </div>
     </header>
 
+    <main class="container">
+        <div class="px-3">
+            <h2 class="contact-heading">How can you contact us?</h2>
+            <p class="contact-text">The first method is by reaching out to our main office:</p>
 
-    <main>
-        <div style="margin-left: 20px;">
-            <br>
-            <b>
-                <h2 style="font-family:'Times New Roman', Times, serif; color: rgb(39, 49, 33); ;">How can you contact
-                    us?
-                </h2>
-                <p style="font-family:'Times New Roman', Times, serif; color: rgb(56, 64, 46); font-size: larger;">The
-                    first method is by
-                    reaching out to
-                    the main office</p>
-            </b>
-
-            <center>
-                <p><iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.3666709760705!2d90.37410717533761!3d23.80555697863281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c72b651d6b67%3A0x8e61ada15546ee4!2sScholastica%20Senior%20Campus%20Mirpur!5e0!3m2!1sen!2sbd!4v1781705826048!5m2!1sen!2sbd"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-            </center>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=baked goods bakery&t=&z=13&ie=UTF-8&iwloc=&output=embed"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
-
     </main>
 
-    <footer></footer>
-
-
     <div class="footer">
-        <p>@copy all rights and reserved by Swati Singh</p>
+        <p class="mb-0" style="padding: 12px 0;">©All Rights reserved by <b>Aoereta<sup>TM</sup></b></p>
     </div>
-
-
 
 </body>
 

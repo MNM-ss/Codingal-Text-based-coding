@@ -1,0 +1,1 @@
+print(" I read some books today.\nthe book I read was named Dakghor.\nI also ate some burgers as well.\nlastly, I helped my brother with his drawing competition.")

@@ -19,3 +19,29 @@ for i in string:
     string2 = i + string2
 print("\nThe Original String = ", string)
 print("The Reversed String = ", string2)
+
+
+# input number greater than 1
+n = int(input("Enter the value of n: "))
+
+print ("numbers from {0} to {1} are: ".format(n,1))
+
+# loop to print numbers
+for i in range(n,0,-1):
+    print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

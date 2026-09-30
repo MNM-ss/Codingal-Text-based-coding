@@ -1,19 +1,19 @@
-class Computer:
+class Password:
 
     def __init__(self):
-        self.__maxprice = 900
+        self.__currentpassword = 1234
 
-    def sell(self):
-        print("Selling Price: {}".format(self.__maxprice))
+    def check(self):
+        print("Current Password: {}".format(self.__currentpassword))
 
-    def setMaxPrice(self, price):
-        self.__maxprice = price
+    def setCurrentPassword(self, pp):
+        self.__currentpassword = pp
 
-c = Computer()
-c.sell()
+c = Password()
+c.check()
 
-c._maxprice  = 1000
-c.sell()
+c._currentpassword  = 1000
+c.check()
 
-c.setMaxPrice(1000)
-c.sell()
+c.setCurrentPassword(1000)
+c.check()
